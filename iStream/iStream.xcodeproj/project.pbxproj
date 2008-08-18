@@ -61,7 +61,7 @@
 		9D9D808B0E4BA49C00CED1B5 /* libsox.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsox.0.dylib; sourceTree = "<group>"; };
 		9DB705450C42C1F2007350CB /* istream.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = istream.pdf; sourceTree = "<group>"; };
 		9DB7058C0C42C387007350CB /* istream */ = {isa = PBXFileReference; lastKnownFileType = folder; path = istream; sourceTree = "<group>"; };
-		9DF354FF0E454B0B00896600 /* sox */ = {isa = PBXFileReference; lastKnownFileType = file; path = sox; sourceTree = "<group>"; };
+		9DF354FF0E454B0B00896600 /* sox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = sox; sourceTree = "<group>"; };
 		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
 		DA206CF3015C4E8B03C91932 /* iStream.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = iStream.applescript; sourceTree = "<group>"; };
 /* End PBXFileReference section */
