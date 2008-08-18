@@ -16,8 +16,8 @@
 	};
 	257572D5072881A4000BE9CA /* Info.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 572}}";
-			sepNavSelRange = "{656, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {887, 714}}";
+			sepNavSelRange = "{759, 0}";
 			sepNavVisRange = "{0, 1077}";
 			sepNavWindowFrame = "{{15, 473}, {788, 700}}";
 		};
@@ -82,6 +82,7 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryName = istream;
 		};
 		scmType = "";
 	};
@@ -149,12 +150,15 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 240618927;
-			PBXWorkspaceStateSaveDate = 240618927;
+			PBXPerProjectTemplateStateSaveDate = 240714297;
+			PBXWorkspaceStateSaveDate = 240714297;
 		};
 		perUserProjectItems = {
 			9D0DF9340CCD13900037D162 = 9D0DF9340CCD13900037D162 /* PBXTextBookmark */;
 			9D0DF9350CCD13900037D162 = 9D0DF9350CCD13900037D162 /* PBXTextBookmark */;
+			9D15B0960E590272009D82A7 /* PBXTextBookmark */ = 9D15B0960E590272009D82A7 /* PBXTextBookmark */;
+			9D15B0970E590272009D82A7 /* PBXTextBookmark */ = 9D15B0970E590272009D82A7 /* PBXTextBookmark */;
+			9D15B0980E590272009D82A7 /* PBXTextBookmark */ = 9D15B0980E590272009D82A7 /* PBXTextBookmark */;
 			9D4EE0F30CC6935B00070EA4 = 9D4EE0F30CC6935B00070EA4 /* PBXTextBookmark */;
 			9D8BF1C70E441705004FC47C = 9D8BF1C70E441705004FC47C /* PBXTextBookmark */;
 			9D8BF1CE0E4417E9004FC47C = 9D8BF1CE0E4417E9004FC47C /* PBXTextBookmark */;
@@ -195,6 +199,36 @@
 		rLoc = 759;
 		rType = 0;
 		vrLen = 1034;
+		vrLoc = 0;
+	};
+	9D15B0960E590272009D82A7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 3";
+		rLen = 0;
+		rLoc = 87;
+		rType = 0;
+		vrLen = 104;
+		vrLoc = 0;
+	};
+	9D15B0970E590272009D82A7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 3";
+		rLen = 0;
+		rLoc = 87;
+		rType = 0;
+		vrLen = 104;
+		vrLoc = 0;
+	};
+	9D15B0980E590272009D82A7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 257572D5072881A4000BE9CA /* Info.plist */;
+		name = "Info.plist: 24";
+		rLen = 0;
+		rLoc = 759;
+		rType = 0;
+		vrLen = 1077;
 		vrLoc = 0;
 	};
 	9D4EE0F30CC6935B00070EA4 /* PBXTextBookmark */ = {
