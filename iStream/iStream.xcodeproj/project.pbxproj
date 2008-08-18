@@ -29,6 +29,7 @@
 		257572CD072881A4000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		9D06CFA20C405C26004AF843 /* acc2mp3.pl in Resources */ = {isa = PBXBuildFile; fileRef = 9D06CFA10C405C26004AF843 /* acc2mp3.pl */; };
 		9D06D0590C415568004AF843 /* vrstream.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9D06D0580C415568004AF843 /* vrstream.icns */; };
+		9D15B0930E590255009D82A7 /* libltdl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D15B0920E590255009D82A7 /* libltdl.3.dylib */; };
 		9D5700F30C3AEF3100BBFF31 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9D5700F20C3AEF3100BBFF31 /* ffmpeg */; };
 		9D6C9C950E43E4D200C88260 /* decrypt in Resources */ = {isa = PBXBuildFile; fileRef = 9D6C9C940E43E4D200C88260 /* decrypt */; };
 		9D7369510C40368C0027CFAC /* daisycopy.pl in Resources */ = {isa = PBXBuildFile; fileRef = 9D7369500C40368C0027CFAC /* daisycopy.pl */; };
@@ -52,6 +53,7 @@
 		65359356078DD41800E8BB2F /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
 		9D06CFA10C405C26004AF843 /* acc2mp3.pl */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.perl; path = acc2mp3.pl; sourceTree = "<group>"; };
 		9D06D0580C415568004AF843 /* vrstream.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = vrstream.icns; sourceTree = "<group>"; };
+		9D15B0920E590255009D82A7 /* libltdl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libltdl.3.dylib; sourceTree = "<group>"; };
 		9D5700F20C3AEF3100BBFF31 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 		9D6C9C940E43E4D200C88260 /* decrypt */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = decrypt; sourceTree = "<group>"; };
 		9D7369500C40368C0027CFAC /* daisycopy.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = daisycopy.pl; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				257572CC072881A4000BE9CA /* Cocoa.framework in Frameworks */,
 				257572CD072881A4000BE9CA /* AppleScriptKit.framework in Frameworks */,
 				9D9D808C0E4BA49C00CED1B5 /* libsox.0.dylib in Frameworks */,
+				9D15B0930E590255009D82A7 /* libltdl.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +104,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D15B0920E590255009D82A7 /* libltdl.3.dylib */,
 				9D9D808B0E4BA49C00CED1B5 /* libsox.0.dylib */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
@@ -277,8 +281,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)\"";
 				PRODUCT_NAME = iStream;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -299,8 +305,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)\"";
 				OTHER_OSAFLAGS = "-x";
 				PRODUCT_NAME = iStream;
 				WRAPPER_EXTENSION = app;
