@@ -294,7 +294,7 @@ on openstageDir(theString)
 end openstageDir
 
 on openFile(theString)
-	tell progress indicator "progress" of window "main" to start
+	--tell progress indicator "progress" of window "main" to start
 	log "in openstateDir"
 	tell window "main"
 		set theTitle to theString
