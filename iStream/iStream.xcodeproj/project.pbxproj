@@ -29,12 +29,12 @@
 		257572CD072881A4000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		9D06CFA20C405C26004AF843 /* acc2mp3.pl in Resources */ = {isa = PBXBuildFile; fileRef = 9D06CFA10C405C26004AF843 /* acc2mp3.pl */; };
 		9D06D0590C415568004AF843 /* vrstream.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9D06D0580C415568004AF843 /* vrstream.icns */; };
-		9D15B0930E590255009D82A7 /* libltdl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D15B0920E590255009D82A7 /* libltdl.3.dylib */; };
+		9D15B0930E590255009D82A7 /* libltdl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D15B0920E590255009D82A7 /* libltdl.3.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9D5700F30C3AEF3100BBFF31 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9D5700F20C3AEF3100BBFF31 /* ffmpeg */; };
 		9D6C9C950E43E4D200C88260 /* decrypt in Resources */ = {isa = PBXBuildFile; fileRef = 9D6C9C940E43E4D200C88260 /* decrypt */; };
 		9D7369510C40368C0027CFAC /* daisycopy.pl in Resources */ = {isa = PBXBuildFile; fileRef = 9D7369500C40368C0027CFAC /* daisycopy.pl */; };
 		9D8BF1BE0E4416C6004FC47C /* busy.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 9D8BF1BD0E4416C6004FC47C /* busy.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
-		9D9D808C0E4BA49C00CED1B5 /* libsox.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D808B0E4BA49C00CED1B5 /* libsox.0.dylib */; };
+		9D9D808C0E4BA49C00CED1B5 /* libsox.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D808B0E4BA49C00CED1B5 /* libsox.0.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9DB705460C42C1F2007350CB /* istream.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9DB705450C42C1F2007350CB /* istream.pdf */; };
 		9DB705A50C42C387007350CB /* istream in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7058C0C42C387007350CB /* istream */; };
 		9DE245340E567DD700D2C7F4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 257572D5072881A4000BE9CA /* Info.plist */; };
