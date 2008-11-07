@@ -67,12 +67,19 @@ on choose menu item theObject
 			--set filesToCopy to choose file with prompt "Choose the file you wish to load to your device." of type {} with multiple selections allowed
 			set filesToCopy to openFile("Choose text or html files to load to VRStream")
 			set filesToCopy to POSIX file filesToCopy as list
-			log filesToCopy
 			
-			--set stagingFolder to choose folder with prompt "Choose the Documents folder of your device." as string
-			set stagingFolder to openstageDir("Choose the VRStream's text directory")
-			set myDIR to POSIX file stagingFolder as alias
-			log myDIR
+			
+			set foldertest to "" as string
+			repeat until foldertest contains "$VRText"
+				set stagingFolder to choose folder with prompt "Choose the text folder of your device." as string
+				set stagingFolder to openstageDir("Choose the VRStream's text directory")
+				set myDIR to POSIX file stagingFolder as alias
+				set foldertest to myDIR as string
+				if foldertest contains "$VRText" then
+					exit repeat
+				end if
+			end repeat
+			
 			
 			try
 				tell application "Finder"
@@ -126,9 +133,9 @@ on choose menu item theObject
 			log filesToCopy
 			
 			--set stagingFolder to choose folder with prompt "Choose the folder on the VRStream to copy these files to." as string
-			set stagingFolder to openstageDir("Choose the VRStream's  directory")
+			set stagingFolder to openstageDir("Choose the VRStream's Music or Other Books  directory")
 			set myDIR to POSIX file stagingFolder as alias
-			log myDIR
+			
 			
 			try
 				tell application "Finder"
@@ -154,18 +161,40 @@ on choose menu item theObject
 		--set filesToCopy to choose folder with prompt "Choose the directory of the DAISY book you wish to load to your device." with multiple selections allowed
 		
 		--set stagingFolder to choose folder with prompt "Choose the DAISY folder of your device." as string
-		try
-			set daisyFolder to openstageDir("Open your Daisy/NISO book directory")
-			set streamFolder to openstageDir("Open the Daisy/NISO directory on VRStream")
-			--display dialog "Please enter your book's folder name." default answer "Folder Name Here"
-			--set bookfolder to text returned of the result
-			--set bookfolder to streamFolder & bookfolder
-			tell progress indicator "progress" of window "main" to start
-			log "rsync -av '" & daisyFolder & "' '" & streamFolder & "'"
-			do shell script "rsync -av '" & daisyFolder & "' '" & streamFolder & "'"
-			set tfv to "book"
-			set theTest to true
-		end try
+		
+		set daisyFolder to openstageDir("Open your Daisy/NISO book directory")
+		set streamFolder to openstageDir("Open the Daisy/NISO directory on VRStream")
+		--display dialog "Please enter your book's folder name." default answer "Folder Name Here"
+		--set bookfolder to text returned of the result
+		--set bookfolder to streamFolder & bookfolder
+		-- tell progress indicator "progress" of window "main" to start
+		log "rsync -av '" & daisyFolder & "' '" & streamFolder & "'"
+		do shell script "rsync -av '" & daisyFolder & "' '" & streamFolder & "'"
+		set tfv to "book"
+		set theTest to true
+		
+	end if
+	
+	
+	
+	if the name of theObject is "m_zip" then
+		
+		--log "in m_text"
+		--set filesToCopy to choose folder with prompt "Choose the directory of the DAISY book you wish to load to your device." with multiple selections allowed
+		
+		--set stagingFolder to choose folder with prompt "Choose the DAISY folder of your device." as string
+		
+		set zipFile to openFile("Choose zip archive to load to VRStream")
+		set streamFolder to openstageDir("Open the directory on VRStream")
+		--display dialog "Please enter your book's folder name." default answer "Folder Name Here"
+		--set bookfolder to text returned of the result
+		--set bookfolder to streamFolder & bookfolder
+		-- tell progress indicator "progress" of window "main" to start
+		log "unzip '" & zipFile & "' -d '" & streamFolder & "'"
+		do shell script "unzip '" & zipFile & "' -d '" & streamFolder & "'"
+		set tfv to "book"
+		set theTest to true
+		
 	end if
 	
 	set visible of window "main" to true
@@ -290,6 +319,8 @@ on openstageDir(theString)
 	if theResult is 1 then
 		set the pathNames to (path names of open panel as list)
 		set stagingFolder to pathNames
+	else
+		exit repeat
 	end if
 end openstageDir
 
@@ -298,7 +329,7 @@ on openFile(theString)
 	log "in openstateDir"
 	tell window "main"
 		set theTitle to theString
-		set thePrompt to "Choose File."
+		set thePrompt to "Choose File"
 		
 		if theString is "Choose audio files to load to VRStream" then
 			set theFileTypes to {"mp3", "wav", "aiff", "m4a", "m4p", "m4b", "aif", "mov", "au", "flv", "3gp", "ogg"}
@@ -310,6 +341,10 @@ on openFile(theString)
 		
 		if theString is "Choose the kxo file to load to VRStream" then
 			set theFileTypes to {"kxo"}
+		end if
+		
+		if theString is "Choose zip archive to load to VRStream" then
+			set theFileTypes to {"zip"}
 		end if
 		
 		--set theDirectory to contents of text field "directory"
@@ -340,6 +375,7 @@ on openFile(theString)
 	if theResult is 1 then
 		set the pathNames to (path names of open panel as list)
 		set filesToCopy to pathNames as list
+		
 	end if
 end openFile
 
